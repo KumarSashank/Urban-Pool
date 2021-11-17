@@ -9,22 +9,38 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
-    ImageView map;
+    ImageView map,offer,take;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         map=findViewById(R.id.map_pic);
-        map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Maps", Toast.LENGTH_SHORT).show();
-                mapActivity();
+        offer=findViewById(R.id.offering);
+
+        map.setOnClickListener(new button());
+        offer.setOnClickListener(new button());
+    }
+    public class button implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            switch(v.getId()) {
+                case R.id.map_pic:
+                    Toast.makeText(getApplicationContext(), "Maps", Toast.LENGTH_SHORT).show();
+                    mapActivity();
+                    break;
+                case R.id.offering:
+                    Toast.makeText(getApplicationContext(), "Offers", Toast.LENGTH_SHORT).show();
+                    offeractivity();
+                    break;
             }
-        });
+        }
     }
     public void mapActivity() {
         Intent intent = new Intent(this,MapsActivity.class);
+        startActivity(intent);
+    }
+    public void offeractivity(){
+        Intent intent = new Intent(this,Offering.class);
         startActivity(intent);
     }
 }

@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/ic_sos" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/offering"
         android:layout_width="122dp"
         android:layout_height="98dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/offering"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_you_are_here" />
 
