@@ -31,9 +31,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.signup:
                     Toast.makeText(getApplicationContext(), "Signup", Toast.LENGTH_SHORT).show();
                     signup_page();
+                    break;
 
                 case R.id.login:
                     Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
+                    log_page();
+                    break;
             }
         }
     }
@@ -41,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
     public void signup_page(){
         Intent page = new Intent(this,SignUp.class);
         startActivity(page);
+    }
+    public void log_page(){
+        Intent intent = new Intent(this,HomePage.class);
+        startActivity(intent);
     }
 
 }
